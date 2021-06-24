@@ -1,0 +1,2 @@
+language = "bash"
+run = "python Module2/3.1.py"
