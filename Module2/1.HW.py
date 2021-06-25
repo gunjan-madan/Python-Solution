@@ -11,7 +11,17 @@ print()
 # Anything below a 60 receives an “F”
 
 # You need to write the appropriate if statements, to generate the correct grades.
-
+score =int (input ("Enter your score "))
+if score >= 90:
+ print ("A")
+elif score >=80:
+ print ("B")
+elif score >=70:
+ print ("C")
+elif score >=60:
+ print ("D")
+else:
+ print ("F")
 
 '''-----Task 2: FizzBuzz Game ------'''
 print("****Task 2: ****")
@@ -20,3 +30,10 @@ print()
 # If the number is a multiple of 3, print "Fizz" 
 # If the number is a multiple of 5, print "Buzz"
 # If the number is a multiple of 3 and 5, print "FizzBuzz"
+num =int( input ("Hi, enter a number "))
+if num % 3 == 0 and num % 5 == 0:
+ print("fizzbuzz")
+elif num % 3 == 0:
+ print("fizz")
+elif num % 5 == 0:
+ print("buzz") 
