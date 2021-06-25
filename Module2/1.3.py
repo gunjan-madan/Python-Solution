@@ -29,7 +29,12 @@ print(" ")
 print("*** Task 1.2: ***")
 #The program takes a number as an input
 #Program shall check if the number is divisible by both 3 and 4
-
+print("**Check if the number is divisible by 3 or 4**")
+a=int(input("Enter the a number:"))
+if a%3==0 and a%4==0:
+  print("The number is either divisible by 3 or by 4")
+else:
+ print("Not divisible")
 
 
 """---------Task 2:   Its raining Discount -------------"""
@@ -41,7 +46,22 @@ print("*** Task 2: ***")
 # If membership is silver+ or gold, discount is 10%
 # If membership is gold+ or diamond, discount is 15%
 # if membership is platinum membership discount is 20%
-
+tot=int(input("Enter the purchase amount: "))
+memb=input("Enter your membership type: ")
+if memb=="silver":
+ tot=tot-(5/100*tot)
+ print("The discounted amount is: ",tot)
+elif memb=="silver+" or memb=="gold":
+ tot=tot-(10/100*tot)
+ print("The discounted amount is: ",tot)
+elif memb=="gold+" or memb=="diamond":
+ tot=tot-(15/100*tot)
+ print("The discounted amount is: ",tot)
+elif memb=="platinum":
+ tot=tot-(20/100*tot)
+ print("The discounted amount is: ",tot)
+else:
+ print("Sorry no discount applied")
 
 
 
@@ -57,3 +77,12 @@ print("*** Task 3: ***")
 # Age greater 13: Hang Glider, Wave Rider
 # If the age criteria does not match they can go for the nature walks
 # Write a program that grants access to the rides based on the age conditions.
+age=float(input("Enter your age: "))
+if age>=5 and age<=7:
+  print(" The rides you can go for are : Toon Tango, Net Walk")
+elif age>=8 and age<=12:
+  print("The rides you can go for are : Wonder Splash, Termite Coaster Train")
+elif age>=13 :
+  print("The rides you can go for are: Hang Glider, Wave Rider")
+else:
+  print("Enjoy the nature walks")
