@@ -10,18 +10,18 @@ print()
 # - Let the customer know the total price as each item is added
 # - Allow price of only 10 items
 # - Display the total amount the customer has to pay for the 10 items purchased
-print("**** Task 1: ****")
-ctr=0
-tot=0
-while(ctr<=10):
- price=float(input("Enter the price of the item: "))
- tot=tot+price
- ctr=ctr+1
- if ctr==10:
-   break
- else:
-   print("Your total price so far is: ",tot) 
-print("Total price to pay: ",tot)
+# print("**** Task 1: ****")
+# ctr=0
+# tot=0
+# while(ctr<=10):
+#  price=float(input("Enter the price of the item: "))
+#  tot=tot+price
+#  ctr=ctr+1
+#  if ctr==10:
+#    break
+#  else:
+#    print("Your total price so far is: ",tot) 
+# print("Total price to pay: ",tot)
 
 
 '''Task 2: Cookie Time'''

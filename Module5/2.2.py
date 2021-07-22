@@ -1,4 +1,4 @@
-# In one of your previous lessons, you have written a program called  "Guess the number" game by pre assigning the number to be guessed.
+  # In one of your previous lessons, you have written a program called  "Guess the number" game by pre assigning the number to be guessed.
 # Now imagine if you could get the computer to generate a random number, and then you could use that for the guessing game.
 # Python provides a built-in module that you can use to generate random numbers.
 # Let's take a look. 
@@ -60,7 +60,7 @@ print("The radius of the football pitch is: ",num)
 area=3.14*num*num
 peri=2*3.14*num
 print("The area of the football pitch is ",area)
-print("The perimeter of the football pitch is ",peri)
+print("The perim  eter of the football pitch is ",peri)
 
 
 

@@ -8,6 +8,7 @@ print()
 # Uncomment the statements below and click Run
 
 import datetime
+
 x = datetime.datetime.now()
 print("The current date is: ", datetime.datetime.now())
 print("The date today is: ",x.day)
@@ -22,6 +23,7 @@ print("The current year is: ", x.year)
 # year - Displays the current year from the date returned by the datetime.now()
 # Write a program that calculates the age of a person using the list of functions given in the table. 
 import datetime
+
 x = datetime.datetime.now()
 print("The date today is: ",x)
 mth=int(input("Enter your birth month (in number):"))
