@@ -16,6 +16,11 @@ for i in codewords:
 else:
  print("Sorry. Incorrect Password")
 
+if(guestcdwrd in codewords):
+  print("The codeword is right. You may enter.")
+else:
+  print("Sorry. Incorrect Password")
+
 
 '''Task 2: Earn Your Brownie Points'''
 print("****** Task 2: *******")

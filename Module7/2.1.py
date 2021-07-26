@@ -43,10 +43,10 @@ print()
 # MN347,Sean,9025394528
 # Your program should print the details of all the members
 # Hint: Assign a set of values to the membership number
-members={"MN012":{"Beth","9823628678"},
-        "MN890":{"Noah","9710234573"},
-        "MN456":{"Tia","9563029266"},
-        "MN347":{"Sean","9025394528"}}
+members={"MN012":["Beth","9823628678"],
+        "MN890":["Noah","9710234573"],
+        "MN456":["Tia","9563029266"],
+        "MN347":["Sean","9025394528"]}
 print("***** Details of all the Members *******")
 print(members)
 
@@ -56,7 +56,7 @@ print()
 # Mr.Bumblebee now has to add details of four more members to the list.
 # To add items to the list, you need to specify the dictionary name, followed by the key, and the value(s). 
 # Here is an example to add details of a person named Nita to the members dictionary:
-#members["MN598"]="Nita","9870987677"
+members["MN598"]="Nita","9870987677"
 # Write a program to add the following details to the members dictionary
 # MN908,Mita,9870987699
 # MN231,Sandra,9578091872
@@ -72,6 +72,8 @@ members["MN616"]="Ayur","9109725534"
 members["MN990"]="Sara","9320997486"
 print("*** List of Members ***")
 print(members)
+for i in members:
+  print(members[i])
 membercopy=members.copy()
 
 

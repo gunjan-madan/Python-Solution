@@ -18,6 +18,9 @@ print()
 '''Task- Use For Loop'''
 # Can you change the code to print the list of fruits using a for loop?
 
+for fruit in fruits:
+  print(fruit)
+
 '''Task 2:  Grocery Dam'''
 print("****** Task 2: *****")
 print()
