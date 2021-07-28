@@ -1,81 +1,88 @@
-#Operations on Dictionaries
+#Nested Dictionaries
+#A nested dictionary is a dictionary inside a dictionary. It's a collection of dictionaries into one single dictionary.
 
-''' Task 1: Key Value Pair '''
+# nested_dict = { 'dictA': {'key_1': 'value_1'},
+#                 'dictB': {'key_2': 'value_2'}}
+print()
+print('***Example of Nested Dictionary***')
+print()
+
+familyMembers={1:{'name': 'John', 'age':'27', 'gender':'Male'},
+               2:{'name': 'Susan', 'age':'15', 'gender':'Female', 'hobby': 'painting'}}
+print(familyMembers)
+
+print()
+print('***Access elements')
+print()
+# print(familyMembers[1])
+# print(familyMembers[1]['name'])
+# print(familyMembers[1]['age'])
+# print(familyMembers[1]['gender'])
+
+print()
+print('***Add New elements to the dictionary***')
+print()
+# familyMembers[3]={}
+# familyMembers[3]['name'] = 'Luna'
+# familyMembers[3]['age'] = '24'
+# familyMembers[3]['gender'] = 'Female'
+# familyMembers[3]['married'] = 'Yes'
+# print(familyMembers[3])
+
+#You can directly asssign a dictionary also
+# familyMembers[4] = {'name': 'Peter', 'age': '29', 'gender': 'Male', 'married': 'Yes'}
+# print(familyMembers[4])
+
+print()
+print('***Iterate through the nested dictionary***')
+print()
+# for p_id, p_info in familyMembers.items():
+#     print("\nPerson ID:", p_id)
+    
+#     for key in p_info:
+#         print(key + ':', p_info[key])
+
+print()
+print('***Delete Items from Dictionary***')
+print()
+#To delete one specific Item:
+# members = {1: {'name': 'John', 'age': '27', 'gender': 'Male'},
+#           2: {'name': 'Marie', 'age': '22', 'gender': 'Female'},
+#           3: {'name': 'Luna', 'age': '24', 'gender': 'Female', 'married': 'No'},
+#           4: {'name': 'Peter', 'age': '29', 'gender': 'Male', 'married': 'Yes'}}
+
+# del members[3]['married']
+# del members[4]['married']
+# print(members)
+
+# Delete entire nested dictionary
+# del members[4]
+# print(members)
+
+''' Task 1: Stack it Right '''
 print("****** Task 1: ******")
 print()
-# Uncomment the below statements, click Run and observe the output?
-# members={"MN012":["Beth","9823628678"],
-#        "MN890":["Noah","9710234573"],
-#        "MN456":["Tia","9563029266"],
-#        "MN347":["Sean","9025394528"]}
-# for  i in members:
-#  print(members[i]) 
+#Create a nested dictonary for icecreams and display result like:
 
-'''Task: Create and Iterate'''
-#Create a dictionary for Employee IDs as keys and Storing name and designation
-# ID: PY001  Name: James   Designation: Developer
-# ID: PY102  Name: Alex   Designation: Team Lead
-# ID: PY440  Name: Keith   Designation: Designer
-# ID: PY324  Name: Susan   Designation: Project Manager
-# ID: PY100  Name: Michael   Designation: Tester
+# Ice Cream: 0
+# flavor: Vanilla
+# price: 0.5
+# pints: 20
+# Ice Cream: 1
+# flavor: Chocolate
+# price: 0.5
+# pints: 31
+# Ice Cream: 2
+# flavor: Cookies and Cream
+# price: 0.75
+# pints: 14
 
-#Iterate the list using for loop
-employees={"PY001":["James", "Developer"],
-           "PY102":["Alex","Team Lead"],
-           "PY440":["Keith","Designer"],
-           "PY324":["Susan","Project Manager"],
-           "PY100":["Michael","Tester"]}
 
-for i in employees:
-  print(i, ":", employees[i])
+icecream = {0 : {"flavor" : "Vanilla", "price" : "0.5", "pints" : "20"}, 1 : {"flavor" : "Chocolate", "price": 0.5, "pints" : "31"}, 2 : {"flavor" : "Cookies & Cream", "price" : "0.75", "pints" : "14"}}
+print(icecream)
 
-''' Task 2: Set the Value '''
-print("****** Task 2: ******")
-print()
-# Mr.Bumblebee wants to maintain the details of all the librarians working in the library.
-# He has created the program and wants you to uncomment and click Run.
-# librarians={"LIB01":["Gary","Barrett Street,5401"],
-#           "LIB02":["Clement","Cedar Lane 5401"],
-#           "LIB03":["Rebecca","Dewey Drive 5401"],
-#           "LIB04":["Pria","Shelburne Road 5401"]}
-# print("***** Details of Librarians *******")
-# print(librarians)
-# The librarian Gary has recently moved into a new place and hence the address in the dictionary needs to be updated.
-# Uncomment the statements below, click Run and observe the output
-# librarians.update({"LIB01":{"Gary", "South Street 5401"}})
-# print("**** Updated List of Librarians *****")
-# print(librarians)
+for numb, cream in icecream.items():
+  print("\nIcecream: ", numb)
 
-'''Task: Update the dictionary'''
-#Update the above employee dictionary for the following changes:
-# ID: PY440  Name: Keith   Designation: Solution Designer
-# ID: PY500  Name: Kiya   Designation: Designer
-employees.update({"PY440":["Keith","Solution Designer"]})
-print(employees)
-
-''' Task 3: Can you find it? '''
-print("****** Task 3: ******")
-print()
-# Uncomment the statements and click Run
-#translator={"Book":"Libro",
-#          "Details":"Detalle",
-#          "Number":"Número",
-#          "Name":"Nombre",
-#          "Days":"Dias",
-#          "Weeks":"Semanas"}
-#if "Days" in translator:
-# print("Found the word")
-#else:
-# print("Word not found")
-
-'''Task: Find'''
-# In the employee dictionary, find if the keys "PY102" and "PY120" are available.
-
-''' Task 4: Values and Keys '''
-print("****** Task 4: ******")
-print()
-#To view all the values or keys in a dictionary 
-# print(librarians.values()) 
-#will print all the values of the dictionary librarians
-# print(librarians.keys()) 
-#will print all the keys of the dictionary librarians
+  for key in cream:
+    print(key + ":", cream[key])

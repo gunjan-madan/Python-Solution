@@ -1,74 +1,112 @@
-''' Task 1: Three Dice '''
-print("****** Task 1: ******")
+#Grouping Multiple values by same key
+
+print('*** Multiple books by one author***')
 print()
-# The next game that Mr.Bumblebee has planned is called "Three Dice". 
-# The rules of the game is as follows:
-# - Each dice has three sides each.
-# - Each of  side of the dice has the number 1, 2 and 3 printed
-# - A player rolls  all the three dice. On rolling
-# - If he gets all three of the same number, the program displays "Rollzee"
-# - If he gets two of the same number, the program display "Two of a kind"
-# - If he gets one of each number, the program displays "One of a kind".
-# The player gets to roll the dice as long as he wants.
-# If he wants to quit the game, he needs to type "Exit"
-import random
-exitch=""
-dice={"val1":0,"val2":0,"val3":0}
-while exitch.lower()!="exit":
-   print("Dice has been rolled")
-   for i in dice:  # "Roll" the dice to get a random number between 1-3
-    dice[i] = random.randint(1,3)
-   if dice["val1"]==dice["val2"]==dice["val3"]:
-     print(dice.values())
-     print("Rollzee")
-   elif dice["val1"]==dice["val2"] or dice["val1"]==dice["val3"] or dice["val2"]==dice["val3"]:
-     print(dice.values())
-     print("Two of a kind")
-   else:
-     print(dice.values())
-     print("One of a kind")
-   exitch =input("Press enter to keep playing or type exit to stop playing: ")
+#If there are multiple books by authors and you want to group them together.
+# Uncomment the statements below and click Run.
+# bookdetails={"SN1":["Dr.Seuss","The Cat in the Hat"],
+#             "SN2":["E. B. White","Charlotte's Web"]}
+# print(bookdetails["SN1"])
 
 
-''' Task 2: What's the capital? '''
+print('*** Task: Groups***')
+print()
+# Write a program to create a dictionary of library members as given in the format(ID,Name,Phone number):
+# MN012,Beth,9823628678
+# MN890,Noah,9710234573
+# MN456,Tia,9563029266
+# MN347,Sean,9025394528
+# Your program should print the details of all the members
+# Hint: Assign a set of values to the membership number
+members={"MN012":{"Beth","9823628678"},
+        "MN890":{"Noah","9710234573"},
+        "MN456":{"Tia","9563029266"},
+        "MN347":{"Sean","9025394528"}}
+print("***** Details of all the Members *******")
+print(members)
+
+
+''' Task 2:  Add to the Stack '''
 print("****** Task 2: ******")
 print()
-# The final game of the community event is “Guess the Capital”.
-# You have created a similar program in your earlier “if-else” lesson. 
-# You can either change that program or use the list below to create a new program.
-# Here is the list of the country and its capitals:
-# India - New Delhi
-# Afghanistan - Kabul
-# Brazil - Brasilia
-# Canada - Ottawa
-# Indonesia - Jakarta
-# Ireland - Dublin
-# Netherlands - Amsterdam
-# Norway - Oslo
-# Turkey - Ankara
-# Vietnam - Hanoi
-# Mr.Bumblebee want you to create a game where :
-# - A player has to guess the capital of the country
-# - For each correct answer, the player gets one point
-# - At the end of the game, the total score needs to be displayed
-print("-----Guess the Capital-----")
-countcap={"India":"New Delhi",
-          "Afghanistan":"Kabul",
-          "Brazil":"Brasilia",
-          "Canada":"Ottawa",
-          "Indonesia":"Jakarta",
-          "Ireland":"Dublin",
-          "Netherlands":"Amsterdam",
-          "Norway":"Oslo",
-          "Turkey":"Ankara",
-          "Vietnam":"Hanoi"}
-cnt=0
-for i in countcap:
- print("What is the capital of ",i)
- ans=input()
- if ans.lower()==countcap[i].lower():
-    print("Correct")
-    cnt=cnt+1
- else:
-    print("Incorrect")
-print("Your score is: ",cnt," out of 10")
+# Mr.Bumblebee now has to add details of four more members to the list.
+# To add items to the list, you need to specify the dictionary name, followed by the key, and the value(s). 
+# Here is an example to add details of a person named Nita to the members dictionary:
+#members["MN598"]="Nita","9870987677"
+# Write a program to add the following details to the members dictionary
+# MN908,Mita,9870987699
+# MN231,Sandra,9578091872
+# MN616,Ayur,9109725534
+# MN990,Sara,9320997486
+# Once you have added the members, create a copy of the dictionary.
+# A copy of the dictionary can be created using the copy() function
+# For example:
+#membercopy=members.copy()
+members["MN908"]="Mita","9870987699"
+members["MN231"]="Sandra","9578091872"
+members["MN616"]="Ayur","9109725534"
+members["MN990"]="Sara","9320997486"
+print("*** List of Members ***")
+print(members)
+membercopy=members.copy()
+
+
+''' Task 3: Pop Hop '''
+print("****** Task 3: *******")
+print()
+# Some of the members of the library are moving to a new town.
+# So they have approached Mr.Bumblebee to unsubscribe their membership.
+# For example to remove a member with the key MN234: 
+#members.pop("MN234")
+# You need to write a program to remove the following library members: 
+# Beth -> Membership Number: MN012
+# Ayur -> Membership Number: MN616
+# Check the length of the dictionary after removing the members. [Hint: Use the len() function]
+print("*** List of Members ***")
+print("Number of members before deletion: ",len(members))
+members.pop("MN012")
+members.pop("MN616")
+print("Members after removal:")
+print(members)
+print("Number of members after deletion: ",len(members))
+
+
+
+''' Task 4: Merge to Surge '''
+print("****** Task 4: ******")
+print()
+# Mr.Bumblebee wants you to create two dictionaries - 
+#  1. Details of the different library sections.
+#  2. Membership Detail
+# Here are the details of the different library sections:
+# - Acquisition Section - Receives requests  for new books
+# - Classification Section - Subject wise classification of books
+# - IT Section - Provides automated,digital Library Service
+# - Reference Section - Consists of encyclopaedias, and reference books
+# Here are the details of the membership types:
+# - Full - Full access to the Library Services
+# - Associate - Borrowing rights 
+# - Remote - Access to Digital Services
+# Mr.Bumblebee then wants you to combine these two dictionaries into one called  Library Details. To combine dictionaries you need to specify it as:
+#newdictionary={“Key1”:dictionary1,
+#               “Key2”:dictionary2}
+
+libsection={"Acquisition Section":"Receives requests for new books",
+          "Classification Section":"Subject wise classification of books",
+          "IT Section":"Provides automated,digital Library Service",
+          "Reference Section":"Consists of encyclopaedias, and reference books"}
+print()          
+print("**** Library Sections *****")
+print(libsection)
+#Membership Details
+libmembership={"Full":"Full access to the Library Services",
+               "Associate":"Borrowing rights",
+               "Remote":"Access to Digital Services"}
+print()
+print("***** Membership Details ******")
+print(libmembership)
+#Combined Dictionary
+libdetails={"Section":libsection,"Membership":libmembership}
+print()
+print("***** Combined Dictionary ******")
+print(libdetails)
