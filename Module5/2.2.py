@@ -30,6 +30,7 @@ print()
 # Run the program 3 to 4 times and see the output changing.
 # choice() shuffles the character in the string and returns random character each time.
 # The choice()  function can be used in applications that require a random password to be generated.
+
 # Ready to write a program that generates a random password. Part of the program is written for you..
 # Uncomment the statements, complete the program and click Run, to execute the program
 
