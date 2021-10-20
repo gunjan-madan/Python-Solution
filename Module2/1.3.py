@@ -47,7 +47,7 @@ print("*** Task 2: ***")
 # If membership is gold+ or diamond, discount is 15%
 # if membership is platinum membership discount is 20%
 tot=int(input("Enter the purchase amount: "))
-memb=input("Enter your membership type: ")
+memb=input("Enter your membership type: ").lower()
 if memb=="silver":
  tot=tot-(5/100*tot)
  print("The discounted amount is: ",tot)

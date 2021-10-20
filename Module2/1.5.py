@@ -13,7 +13,7 @@ if chk == 'no' or chk == 'n':
   a = float(input('enter the length of one of the sides:'))
   b = float(input('enter the length of the other side: '))
   c = float((a**2 + b**2)**.5)
-  print ('hypotenuse:', c)
+  print ('hypotenuse:', c)  
 elif chk == 'yes' or chk == 'y':
   c = float(input('enter the length of the hypotenuse: '))
   b = float(input('enter the length of the known side: '))

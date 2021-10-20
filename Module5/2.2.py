@@ -35,7 +35,7 @@ print()
 # Uncomment the statements, complete the program and click Run, to execute the program
 
 import random
-passw=""
+password=""
 x="welcome"
 y="CODING"
 z="123456"
